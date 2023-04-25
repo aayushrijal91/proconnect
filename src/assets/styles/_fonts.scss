@@ -1,0 +1,22 @@
+@import url("https://use.typekit.net/enf0iwy.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$font-articulat: "articulat-cf", sans-serif;
+$font-articulat-heavy: "articulat-heavy-cf", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$font-lato: "Lato", sans-serif;
+
+$font-body: $font-articulat;
+
+$font-families: (
+    "articulat": "articulat-cf",
+    "articulat-heavy": "articulat-heavy-cf",
+    "lato": "Lato",
+    "roboto": "Roboto",
+);
+
+@each $name, $font-family in $font-families {
+    .font-#{$name} {
+        font-family: $font-family, sans-serif;
+    }
+}
