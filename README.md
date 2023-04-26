@@ -4,8 +4,6 @@
 
 Developer: [Aayush Rijal](https://www.aayushrijal.net)
 
-Contact: 0452637371
-
 [Github](https://github.com/aayushrijal91/proconnect)
 
 [Figma](https://www.figma.com/file/PcIkLmXMfMpF00EZbGGxki/Pro-Connect?node-id=509-4&t=uRCNJZrsVD1WKYPd-0)

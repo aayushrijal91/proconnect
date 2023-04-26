@@ -215,67 +215,7 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </section>
 
-    <section class="section_5">
-        <?php $section_5 = get_field('section_5') ?>
-        <div class="container">
-            <div class="fs-64 font-articulat-heavy text-center lh-1 pb-5"><?= $section_5['heading'] ?></div>
-
-            <div class="row gx-3 gy-5">
-                <?php
-                if (have_rows('section_5')) :
-                    while (have_rows('section_5')) : the_row();
-                        if (have_rows('services_list')) :
-                            while (have_rows('services_list')) : the_row();
-                                $image = get_sub_field('image');
-                                $title = get_sub_field('title');
-                                $see_more = get_sub_field('see_more');
-                                if (!$see_more) :
-                ?>
-                                    <div class="col-3">
-                                        <div class="section_5_card">
-                                            <div class="image"><img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>"></div>
-                                            <div class="title"><?= $title ?></div>
-                                        </div>
-                                    </div>
-                <?php
-                                endif;
-                            endwhile;
-                        endif;
-                    endwhile;
-                endif;
-                ?>
-            </div>
-            <div class="see_more pt-5" id="homepage_section_5_services_see_more">
-                <div class="row gx-3 gy-5">
-                    <?php
-                    if (have_rows('section_5')) :
-                        while (have_rows('section_5')) : the_row();
-                            if (have_rows('services_list')) :
-                                while (have_rows('services_list')) : the_row();
-                                    $image = get_sub_field('image');
-                                    $title = get_sub_field('title');
-                                    $see_more = get_sub_field('see_more');
-                                    if ($see_more) :
-                    ?>
-                                        <div class="col-3">
-                                            <div class="section_5_card">
-                                                <div class="image"><img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>"></div>
-                                                <div class="title"><?= $title ?></div>
-                                            </div>
-                                        </div>
-                    <?php
-                                    endif;
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-            </div>
-            <button type='button' id="homepage_section_5_services_show_more" class="btn btn-primary mt-5 py-4 text-center text-white rounded-0 w-100 font-lato fs-24">See More</button>
-        </div>
-    </section>
-
+    <?php get_template_part('parts/section', 'services'); ?>
     <?php get_template_part('parts/section', 'contactbanner'); ?>
 
     <section class="section_6 pb-8">

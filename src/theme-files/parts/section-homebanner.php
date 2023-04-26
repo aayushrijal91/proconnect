@@ -1,6 +1,6 @@
 <?php get_template_part('parts/section', 'nav'); ?>
 
-<div class="homepage_banner">
+<header class="homepage_banner">
     <div class="container-fluid px-0">
         <div class="row align-items-center">
             <div class="col-6">
@@ -36,10 +36,10 @@
                         while (have_rows('banner')) : the_row();
                             if (have_rows('slider')) :
                                 while (have_rows('slider')) : the_row();
-                                $image = get_sub_field('image');
-                                ?>
+                                    $image = get_sub_field('image');
+                    ?>
                                     <div><img src="<?= $image['url'] ?>" alt="<?= $image['url'] ?>"></div>
-                                <?php
+                    <?php
                                 endwhile;
                             endif;
                         endwhile;
@@ -52,4 +52,4 @@
     <div class="container">
         <div class="divider"></div>
     </div>
-</div>
+</header>
